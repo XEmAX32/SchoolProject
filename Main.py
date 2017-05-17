@@ -20,17 +20,16 @@ set("mode, pwm")
 set("active, 1")
 set("frequency, 500")
 
-def worker:
-       if(state = 3):
+def worker():
+       if(state == 3):
               global state = 1
        else:
-              global state = state + 1
-              
-       if(state = 1):
+              global state = state + 1 
+       if(state == 1):
               global speed = 50
-       elif(state = 2):
+       elif(state == 2):
               global speed = 70
-       elif(state = 3):
+       elif(state == 3):
               global speed = 90
        GPIO.output(Motor_1, True)
        GPIO.output(Motor_1, False)
