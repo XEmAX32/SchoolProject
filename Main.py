@@ -4,8 +4,8 @@ from time import sleep as sleep
 state = 1
 speed = 50
 
-Motor_1 = 
-Motor_2 =
+Motor_1 = 0
+Motor_2 = 0
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(Motor_1, GPIO.OUT)
 GPIO.setup(Motor_2, GPIO.OUT)
