@@ -3,8 +3,12 @@ from time import sleep as sleep
 
 state = 1
 speed = 50
-       
+
+Motor_1 = 
+Motor_2 =
 GPIO.setmode(GPIO.BOARD)
+GPIO.setup(Motor_1, GPIO.OUT)
+GPIO.setup(Motor_2, GPIO.OUT)
 
 def set(property, val):
         f = open("/sys/class/rpi-pwm/pwm0/" + property, 'w')
@@ -28,11 +32,11 @@ def worker:
               global speed = 70
        elif(state = 3):
               global speed = 90
-       GPIO.output(motor_1, True)
-       GPIO.output(motor_1, False)
+       GPIO.output(Motor_1, True)
+       GPIO.output(Motor_1, False)
        set("duty", str(speed))
        #monitor(state)
-       sleep(60)
+       sleep(120)
        
 #def monitor:
 while True:
