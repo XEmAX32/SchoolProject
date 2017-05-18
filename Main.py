@@ -23,15 +23,15 @@ set("frequency, 500")
 def worker():
         
        if(state == 3):
-               state = 1
+               global state = 1
        else:
-               state = state + 1 
+               global state = state + 1 
        if(state == 1):
-               speed = 50
+               global speed = 50
        elif(state == 2):
-               speed = 70
+               global speed = 70
        elif(state == 3):
-               speed = 90
+              global speed = 90
        GPIO.output(Motor_1, True)
        GPIO.output(Motor_1, False)
        set("duty", str(speed))
